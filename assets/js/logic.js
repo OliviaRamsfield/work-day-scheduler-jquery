@@ -37,9 +37,24 @@ $(".saveBtn").on("click", function(){
     var text = $(this).siblings(".textarea").val();
     var time = $(this).parent().attr("id");
 
+    //save items to local storage
     localStorage.setItem(time, text);
     console.log(localStorage);
+
+    // document.getElementById('9').value = localStorage.getItem("text");
+    // console.log(text);
     })
+
+//retrieve data from local storage if it exists
+// document.getElementById('9').value = localStorage.getItem(text);
 });
 
+// var getSchedule = function() {
+//     text = JSON.parse(localStorage.getItem("text"));
+// }
 
+var getSchedule = function() {
+    text = JSON.parse(localStorage.getItem("text"));
+}
+
+getSchedule();
