@@ -27,5 +27,19 @@ $('.colorcode').each(function(){
     }
 });
 
-// setInterval(checkTime, 1000);
-// console.log(checkTime);
+// figure out how to use setInterval() to update color codes without refreshing
+
+/* End color coding based on current time */
+
+/* Start saving to local storage and adding persistence */
+$(document).ready(function() {
+$(".saveBtn").on("click", function(){
+    var text = $(this).siblings(".textarea").val();
+    var time = $(this).parent().attr("id");
+
+    localStorage.setItem(time, text);
+    console.log(localStorage);
+    })
+});
+
+
