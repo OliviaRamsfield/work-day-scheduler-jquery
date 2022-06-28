@@ -40,21 +40,16 @@ $(".saveBtn").on("click", function(){
     //save items to local storage
     localStorage.setItem(time, text);
     console.log(localStorage);
-
-    // document.getElementById('9').value = localStorage.getItem("text");
-    // console.log(text);
-    })
-
-//retrieve data from local storage if it exists
-// document.getElementById('9').value = localStorage.getItem(text);
 });
 
-// var getSchedule = function() {
-//     text = JSON.parse(localStorage.getItem("text"));
-// }
-
-var getSchedule = function() {
-    text = JSON.parse(localStorage.getItem("text"));
-}
-
-getSchedule();
+// get items from local storage if present
+$("#9 .textarea").val(localStorage.getItem("9"));
+$("#10 .textarea").val(localStorage.getItem("10"));
+$("#11 .textarea").val(localStorage.getItem("11"));
+$("#12 .textarea").val(localStorage.getItem("12"));
+$("#13 .textarea").val(localStorage.getItem("13"));
+$("#14 .textarea").val(localStorage.getItem("14"));
+$("#15 .textarea").val(localStorage.getItem("15"));
+$("#16 .textarea").val(localStorage.getItem("16"));
+$("#17 .textarea").val(localStorage.getItem("17"));
+});
